@@ -1,5 +1,5 @@
 {
-  "name": "dominio-br-cli",
+  "name": "dominio-br",
   "version": "1.0.2",
   "main": "index.js",
   "type": "module",
