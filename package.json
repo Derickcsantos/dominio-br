@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "dominio-br": "./index.js"
+    "dominio-br": "./index.js",
+    "dominio-br.cmd": "./index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["cli", "dominio", "registrobr", "brasilapi", "node"],
+  "author": "Derick Campos Santos",
+  "license": "MIT",
+  "description": "CLI para consultar e sugerir domínios .br usando a API do Registro.br",
   "dependencies": {
     "axios": "^1.12.2",
     "chalk": "^5.6.2",
