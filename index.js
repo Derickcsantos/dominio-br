@@ -8,6 +8,16 @@ import path from 'path';
 const program = new Command();
 const args = process.argv.slice(2);
 
+if (process.platform === "win32" && !process.env.PATH.includes("npm")) {
+  console.log(
+    chalk.yellow(
+      "⚠️  Se o comando 'dominio-br' não for reconhecido no PowerShell, reinstale o Node.js marcando a opção 'Add to PATH', ou use 'cmd' temporariamente."
+    )
+  );
+}
+
+
+
 async function checkDomain(dominio, options) {
     try {
         const response = await axios.get(`https://brasilapi.com.br/api/registrobr/v1/${dominio}`);
@@ -62,7 +72,7 @@ async function bulkCheck(filePath, options) {
 
         const content = fs.readFileSync(absolutePath, "utf-8");
         const domains = content
-            .split("\n")
+            .split(/\r?\n/)
             .map(line => line.trim())
             .filter(line => line.length > 0);
 
@@ -106,7 +116,7 @@ async function bulkCheck(filePath, options) {
 }
 
 program
-    .name("check <dominio>")
+    .name("dominio-br")
     .description("CLI para consultar domínios .br  usando a API do Registro.br")
     .version("1.0.0");
 
