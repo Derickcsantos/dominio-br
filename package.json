@@ -1,6 +1,6 @@
 {
   "name": "dominio-br",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,7 +16,8 @@
     "registrobr",
     "brasilapi",
     "node",
-    "domain"
+    "domain",
+    "package"
   ],
   "author": "Derick Campos Santos",
   "license": "MIT",
