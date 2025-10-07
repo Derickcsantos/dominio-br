@@ -7,34 +7,34 @@ on:
 
 permissions:
   contents: read
-  id-token: write  # necessário para OIDC
+  id-token: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: github  # 🔹 nome do ambiente configurado no GitHub
+    environment: github
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
 
-      - name: Instalar dependências
-        run: npm ci
+      - run: npm ci
 
-      - name: Build (opcional)
-        run: |
+      - run: |
           echo "Nenhuma etapa de build necessária"
-          # npm run build (caso use TypeScript no futuro)
 
       - name: Publish to npm
-        run: npm publish --access public
+        run: |
+          npm publish --access public || (
+            echo "OIDC falhou, tentando com token..."
+            npm publish --access public --//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}
+          )
         env:
           NPM_CONFIG_PROVENANCE: true
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
