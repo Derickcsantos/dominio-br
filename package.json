@@ -20,6 +20,10 @@
     "package"
   ],
   "author": "Derick Campos Santos",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Derickcsantos/dominio-br"
+  },
   "license": "MIT",
   "description": "CLI para consultar e sugerir domínios .br usando a API do Registro.br",
   "dependencies": {
