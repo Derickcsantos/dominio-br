@@ -1,23 +1,22 @@
 {
   "name": "dominio-br",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "bin": {
-    "dominio-br": "./index.js",
-    "dominio-br.cmd": "./index.js"
+    "dominio-br": "./index.js"
   },
-  "keywords": ["cli", "dominio", "registrobr", "brasilapi", "node"],
+  "keywords": ["cli", "dominio", "registrobr", "brasilapi", "node", "domain"],
   "author": "Derick Campos Santos",
   "license": "MIT",
   "description": "CLI para consultar e sugerir domínios .br usando a API do Registro.br",
   "dependencies": {
     "axios": "^1.12.2",
     "chalk": "^5.6.2",
-    "comander": "^0.0.1-security",
     "commander": "^14.0.1"
   }
 }

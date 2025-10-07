@@ -139,3 +139,4 @@ program
     .action(bulkCheck);
 
 program.parse(process.argv);
+
