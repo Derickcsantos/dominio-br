@@ -23,8 +23,6 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-          # 🔹 ativa autenticação via OIDC (sem secrets)
-          scope: "@Derickcsantos"
 
       - name: Instalar dependências
         run: npm ci
