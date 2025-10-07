@@ -1,6 +1,6 @@
 {
   "name": "dominio-br",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "dominio-br": "./index.js",
     "dominio-br.cmd": "./index.js"
   },
-  "keywords": ["cli", "dominio", "registrobr", "brasilapi", "node"],
+  "keywords": ["cli", "dominio", "registrobr", "brasilapi", "node", "domain"],
   "author": "Derick Campos Santos",
   "license": "MIT",
   "description": "CLI para consultar e sugerir domínios .br usando a API do Registro.br",
