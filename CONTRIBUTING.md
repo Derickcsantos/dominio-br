@@ -1,4 +1,8 @@
+<div align="center">
+
 # 🤝 Guia de Contribuição — Dominio-br CLI
+
+</div>
 
 Antes de tudo, obrigado por se interessar em contribuir com o **[Dominio-br CLI](https://www.npmjs.com/package/dominio-br)**! 🚀  
 Sua colaboração ajuda a tornar essa ferramenta mais útil para toda a comunidade de desenvolvedores que buscam agilidade nas consultas de domínios `.br`.
